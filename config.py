@@ -1,8 +1,8 @@
 class Config(object):
     pass
 
-class ProductionConfig(config):
+class ProductionConfig(Config):
     pass
 
-class DeveloperConfig(config):
+class DeveloperConfig(Config):
     DEBUG = True
