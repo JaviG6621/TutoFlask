@@ -1,12 +1,11 @@
-from flask import Flask
-from config import DeveloperConfig
+from flask import*
+
 
 app = Flask(__name__)
-app.config.from_object(DeveloperConfig)
 
 @app.route('/')
-def home():
-    return '<h1>Hello World</h1>'
+def index():
+    return render_template("saludo.html")
 
 if __name__ == "__main__":
     app.run('0.0.0.0', 5000, debug=True)
