@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo | default("Mi app en Flask") }}</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 680px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+            color: #1f2937;
+        }
+        .tarjeta {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #f9fafb;
+        }
+    </style>
+</head>
+<body>
+    <main class="tarjeta">
+        <h1>¡Hola, {{ nombre }}!</h1>
+
+        {% if mensaje %}
+            <p>{{ mensaje }}</p>
+        {% else %}
+            <p>Esta es tu primera vista renderizada con <strong>Flask</strong> y <strong>Jinja2</strong>.</p>
+        {% endif %}
+
+        {% if elementos %}
+            <h2>Elementos:</h2>
+            <ul>
+                {% for item in elementos %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </main>
+</body>
+</html>
