@@ -23,22 +23,8 @@
 </head>
 <body>
     <main class="tarjeta">
-        <h1>¡Hola, {{ nombre }}!</h1>
-
-        {% if mensaje %}
-            <p>{{ mensaje }}</p>
-        {% else %}
-            <p>Esta es tu primera vista renderizada con <strong>Flask</strong> y <strong>Jinja2</strong>.</p>
-        {% endif %}
-
-        {% if elementos %}
-            <h2>Elementos:</h2>
-            <ul>
-                {% for item in elementos %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+        <h1>{{ titulo }}</h1>
+        <h1>{{ usuario }}</h1>>
     </main>
 </body>
 </html>
